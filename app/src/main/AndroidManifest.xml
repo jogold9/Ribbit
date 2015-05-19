@@ -35,7 +35,16 @@
         <activity
             android:name=".ForgotPassActivity"
             android:label="@string/title_activity_forgot_pass"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.joshbgold.ribbit.MainActivity" />
         </activity>
     </application>
 
