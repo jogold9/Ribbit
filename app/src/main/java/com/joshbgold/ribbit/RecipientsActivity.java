@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -20,6 +21,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,7 +114,17 @@ public class RecipientsActivity extends ListActivity{
 
             case R.id.action_send:
                 ParseObject message = createMessage();
-               // send(message);
+                if(message == null){
+                    //error
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage(getString(R.string.error_selecting_file))
+                            .setTitle(getString(R.string.error_selecting_file_title))
+                            .setPositiveButton(android.R.string.ok, null);
+                }
+                else{
+                    send(message);
+                    finish();
+                }
                 return true;
         }
 
@@ -163,5 +175,25 @@ public class RecipientsActivity extends ListActivity{
             }
         }
         return recipientIds;
+    }
+
+    protected void send(ParseObject message){
+        message.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e == null){
+                    // success!
+                    Toast.makeText(RecipientsActivity.this, getString(R.string.succes_message), Toast.LENGTH_LONG).show();
+                }
+                else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(RecipientsActivity.this);
+                    builder.setMessage(getString(R.string.error_sending_message))
+                            .setTitle(getString(R.string.error_selecting_file_title))
+                            .setPositiveButton(android.R.string.ok, null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+            }
+        });
     }
 }
