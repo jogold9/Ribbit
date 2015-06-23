@@ -3,9 +3,10 @@ package com.joshbgold.ribbit;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 
 public class ViewImageActivity extends Activity {
@@ -21,6 +22,7 @@ public class ViewImageActivity extends Activity {
 
         Uri imageUri = getIntent().getData();
 
+        Picasso.with(this).load(imageUri.toString()).into(imageView);
     }
 
     //Set up the @link android.app.ActionBar
@@ -28,12 +30,7 @@ public class ViewImageActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_view_image, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
