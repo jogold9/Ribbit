@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by JoshG on 5/15/2015.
  */
-public class InboxFragment extends android.app.ListFragment {
+public class InboxFragment extends android.support.v4.app.ListFragment {
 
     protected  List<ParseObject> mMessages;
 
