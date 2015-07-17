@@ -77,12 +77,15 @@
           />
 
         <Button
+            android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginButton"
+            android:layout_alignParentLeft="true"
             android:text="@string/login_button_label"
             android:textAllCaps="false"
-            android:textSize="32dp"
+            android:textSize="13sp"
+            android:textColor="@color/text_color"
+            android:background="@drawable/button_custom"
             />
 
     </LinearLayout>
