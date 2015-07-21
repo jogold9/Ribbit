@@ -4,8 +4,8 @@
                 android:layout_height="match_parent"
                 tools:context="com.joshbgold.ribbit.LoginActivity"
                 android:id="@+id/LoginLayout"
-                android:background="@drawable/background_fill"
-                android:padding="5dp">
+                android:padding="5dp"
+                style="@style/AuthBackground">
 
     <ImageView
         android:id="@+id/backgroundImage"

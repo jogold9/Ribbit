@@ -31,8 +31,12 @@ public class LoginActivity extends Activity {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_login);
 
-        ActionBar actionBar = getActionBar();
-        actionBar.hide();
+        try {
+            ActionBar actionBar = getActionBar();
+            actionBar.hide();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         mSignUpTextView = (TextView)findViewById(R.id.signupText);
         mSignUpTextView.setOnClickListener(new View.OnClickListener() {
