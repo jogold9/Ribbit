@@ -39,35 +39,20 @@
         android:paddingBottom="@dimen/login_vertical_padding">
 
         <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/userNameField"
-        android:hint="@string/username_hint"
-        android:ems="10"
-        android:textSize="17sp"
-        android:textColorHint="@color/light_gray"/>
+            android:id="@+id/userNameField"
+            android:hint="@string/username_hint"
+            style="@style/AuthEditText"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/passwordField"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
-            android:textSize="17sp"
-            android:textColorHint="@color/light_gray"
-          />
+            style="@style/AuthEditText"/>
 
         <Button
             android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:text="@string/login_button_label"
-            android:textAllCaps="false"
-            android:textSize="13sp"
-            android:textColor="@color/text_color"
-            android:background="@drawable/button_custom"
-            />
+            style="@style/AuthButton"/>
 
     </LinearLayout>
 
