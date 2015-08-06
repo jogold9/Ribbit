@@ -136,12 +136,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     private boolean isExternalStorageAvailable(){
         String state = Environment.getExternalStorageState();
 
-        if(state.equals(Environment.MEDIA_MOUNTED)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return state.equals(Environment.MEDIA_MOUNTED);
     }
 
     /**
