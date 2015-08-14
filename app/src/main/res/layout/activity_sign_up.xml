@@ -2,7 +2,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.joshbgold.ribbit.SignUpActivity"
+                tools:context="com.joshbgold.ribbit.ui.SignUpActivity"
                 style="@style/AuthBackground">
 
     <EditText

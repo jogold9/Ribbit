@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.joshbgold.ribbit.utils.ParseConstants;
+import com.joshbgold.ribbit.R;
+import com.joshbgold.ribbit.adapters.messageAdapter;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;

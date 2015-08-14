@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.ui;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.joshbgold.ribbit.ForgotPassActivity;
+import com.joshbgold.ribbit.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;

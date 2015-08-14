@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.utils;
 
 /**
  * Created by JoshG on 5/18/2015.

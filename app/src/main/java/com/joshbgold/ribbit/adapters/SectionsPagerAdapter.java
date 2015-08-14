@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.adapters;
 
 /**
  * Created by JoshG on 5/15/2015.
@@ -7,6 +7,10 @@ package com.joshbgold.ribbit;
 import android.content.Context;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.joshbgold.ribbit.R;
+import com.joshbgold.ribbit.ui.FriendsFragment;
+import com.joshbgold.ribbit.ui.InboxFragment;
 
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.joshbgold.ribbit.utils.ParseConstants;
+import com.joshbgold.ribbit.R;
 import com.parse.ParseObject;
 
 import java.util.List;

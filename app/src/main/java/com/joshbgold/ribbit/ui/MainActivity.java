@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.ui;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -18,6 +18,9 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.joshbgold.ribbit.utils.ParseConstants;
+import com.joshbgold.ribbit.R;
+import com.joshbgold.ribbit.adapters.SectionsPagerAdapter;
 import com.parse.ParseUser;
 
 import java.io.File;

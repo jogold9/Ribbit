@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.ui;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.joshbgold.ribbit.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.Timer;

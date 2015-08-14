@@ -1,4 +1,4 @@
-package com.joshbgold.ribbit;
+package com.joshbgold.ribbit.ui;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -14,6 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.joshbgold.ribbit.utils.FileHelper;
+import com.joshbgold.ribbit.utils.ParseConstants;
+import com.joshbgold.ribbit.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
