@@ -1,17 +1,17 @@
 package com.joshbgold.ribbit.ui;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
 import com.joshbgold.ribbit.R;
+import com.joshbgold.ribbit.adapters.UserAdapter;
 import com.joshbgold.ribbit.utils.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -39,9 +39,9 @@ public class FriendsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_friends,
                 container, false);
 
-        mGridView= (GridView)rootView.findViewById(R.id.friendsGrid);
+        mGridView = (GridView)rootView.findViewById(R.id.friendsGrid);
 
-        TextView emptyTextView = (TextView)rootView.findViewById(R.id.empty);
+        TextView emptyTextView = (TextView)rootView.findViewById(android.R.id.empty);
         mGridView.setEmptyView(emptyTextView);
 
         return rootView;
@@ -68,21 +68,19 @@ public class FriendsFragment extends Fragment {
 
                     String[] usernames = new String[mFriends.size()];
                     int i = 0;
-                    for (ParseUser friend : mFriends) {
-                        usernames[i] = friend.getUsername();
+                    for(ParseUser user : mFriends) {
+                        usernames[i] = user.getUsername();
                         i++;
                     }
-                    
-                    if (mGridView.getAdapter()== null) {
+                    if (mGridView.getAdapter() == null) {
                         UserAdapter adapter = new UserAdapter(getActivity(), mFriends);
                         mGridView.setAdapter(adapter);
                     }
-                    else{
+                    else {
                         ((UserAdapter)mGridView.getAdapter()).refill(mFriends);
                     }
-
-                } else {
-
+                }
+                else {
                     Log.e(TAG, e.getMessage());
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                     builder.setMessage(e.getMessage())
