@@ -11,7 +11,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import com.joshbgold.ribbit.R;
-import com.joshbgold.ribbit.adapters.UserAdapter;
+import com.joshbgold.ribbit.adapters.UserAdapter3;
 import com.joshbgold.ribbit.utils.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -73,11 +73,11 @@ public class FriendsFragment extends Fragment {
                         i++;
                     }
                     if (mGridView.getAdapter() == null) {
-                        UserAdapter adapter = new UserAdapter(getActivity(), mFriends);
+                        UserAdapter3 adapter = new UserAdapter3(getActivity(), mFriends);
                         mGridView.setAdapter(adapter);
                     }
                     else {
-                        ((UserAdapter)mGridView.getAdapter()).refill(mFriends);
+                        ((UserAdapter3)mGridView.getAdapter()).refill(mFriends);
                     }
                 }
                 else {
