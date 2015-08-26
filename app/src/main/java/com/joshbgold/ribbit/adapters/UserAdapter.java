@@ -14,13 +14,13 @@ import com.parse.ParseUser;
 
 import java.util.List;
 
-public class UserAdapter3 extends ArrayAdapter<ParseUser> {
+public class UserAdapter extends ArrayAdapter<ParseUser> {
 	
 	protected Context mContext;
 	protected List<ParseUser> mUsers;
 
 	
-	public UserAdapter3(Context context, List<ParseUser> users) {
+	public UserAdapter(Context context, List<ParseUser> users) {
 		super(context, R.layout.message_item, users);
 		mContext = context;
 		mUsers = users;
