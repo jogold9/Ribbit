@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.joshbgold.ribbit.R;
 import com.joshbgold.ribbit.utils.MD5Util;
 import com.parse.ParseUser;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -50,6 +51,12 @@ public class UserAdapter extends ArrayAdapter<ParseUser> {
 		}
 		else{
 			String hash = MD5Util.md5Hex(email);
+			String gravatarURL = "http://www.gravatar.com/avatar" + hash +
+					"?s=204&d=404";
+            Picasso.with(mContext)
+                    .load(gravatarURL)
+                    .placeholder(R.drawable.avatar_empty)
+                    .into(holder.userImageView);
 		}
 				
 //		if (user.getString(ParseConstants.KEY_FILE_TYPE).equals(ParseConstants.TYPE_IMAGE)) {
