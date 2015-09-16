@@ -2,8 +2,10 @@ package com.joshbgold.ribbit;
 
 import android.app.Application;
 
+import com.joshbgold.ribbit.utils.ParseConstants;
 import com.parse.Parse;
 import com.parse.ParseInstallation;
+import com.parse.ParseUser;
 
 public class RibbitApplication extends Application {
 
@@ -19,5 +21,11 @@ public class RibbitApplication extends Application {
         ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
         testObject.saveInBackground();*/
+    }
+
+    public static void updateParseInstallation(ParseUser user){
+        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        installation.put(ParseConstants.KEY_USER_ID, user.getObjectId());
+        installation.saveInBackground();
     }
 }
