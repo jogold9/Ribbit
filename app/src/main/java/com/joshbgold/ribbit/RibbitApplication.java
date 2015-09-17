@@ -15,12 +15,11 @@ public class RibbitApplication extends Application {
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, "W2tNAzL0KmSX6D2KzPrgXj6xVWmDHhyU0oeCuqAd", "31zsSt6SutjBLLnJVgrPith4XyGwHbPSsQTjF4wZ");
+
+        //PushService.setDefaultPushCallback(this, MainActivity.class);
+
         ParseInstallation.getCurrentInstallation().saveInBackground();  //saves device OS information to background on Parse.com
 
-     /* //For testing
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();*/
     }
 
     public static void updateParseInstallation(ParseUser user){
