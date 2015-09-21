@@ -241,5 +241,16 @@ public class RecipientsActivity extends Activity {
         push.sendInBackground();
     }
 
+    protected void sendPushNotificationz() {
+        ParseQuery query = ParseInstallation.getQuery();
+        query.whereContainedIn(ParseConstants.KEY_USER_ID, getRecipientIds());
+
+        // send push notification
+        ParsePush push = new ParsePush();
+        push.setQuery(query);
+        push.setMessage(getString(R.string.push_message, ParseUser.getCurrentUser().getUsername()));
+        push.sendInBackground();
+    }
+
 
 }
